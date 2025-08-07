@@ -7,11 +7,9 @@ import java.util.ArrayList;
 
 @Mapper
 public interface IReplyDao {
+
     ArrayList<ReplyDto> selectReply(int num);
-
     void insert(ReplyDto replydto);
-
     void delete(int replynum);
-
     int getReplyCount(int num);
 }

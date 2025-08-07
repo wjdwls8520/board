@@ -5,8 +5,9 @@
 </head>
 <body>
 <script type="text/javascript">
-  alert('삭제 비밀번호가 일치하지 않습니다');
-  location.href='boardViewWithoutCnt?num=${num}';
+    alert("비밀번호가 수정되었습니다");
+    opener.document.location.href='boardViewWithoutCnt?num=${num}';
+    self.close();
 </script>
 </body>
 </html>

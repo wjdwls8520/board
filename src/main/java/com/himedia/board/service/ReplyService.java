@@ -12,7 +12,7 @@ public class ReplyService {
     IReplyDao rdao;
 
     public void insert(ReplyDto replydto) {
-        rdao.insert(replydto);
+        rdao.insert( replydto);
     }
 
     public void delete(int replynum) {
