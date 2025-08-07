@@ -8,13 +8,13 @@ import java.sql.Timestamp;
 
 @Data
 public class ReplyDto {
+
     private int replynum;
     private int boardnum;
     private String userid;
     private Timestamp writedate;
 
-    @NotNull(message = "내용을 입력하세요")
-    @NotEmpty(message = "내용을 입력하세요")
+    @NotEmpty(message="내용을 입력하세요")
+    @NotNull(message="내용을 입력하세요")
     private String content;
-
 }

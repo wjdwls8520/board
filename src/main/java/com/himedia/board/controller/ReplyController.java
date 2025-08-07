@@ -15,15 +15,17 @@ public class ReplyController {
     ReplyService rs;
 
     @PostMapping("/addReply")
-    public String addReply( ReplyDto replyDto){
-        rs.insert( replyDto );
-        return "redirect:/boardViewWithoutCnt?num=" + replyDto.getBoardnum();
+    public String addReply( ReplyDto replydto ){
+        rs.insert( replydto );
+        return "redirect:/boardViewWithoutCnt?num=" + replydto.getBoardnum();
     }
 
+
     @GetMapping("/deleteReply")
-    public String deleteReply(@RequestParam("replynum") int replynum, @RequestParam("boardnum")  int boardnum){
-        rs.delete(replynum);
+    public String deleteReply( @RequestParam("replynum") int replynum, @RequestParam("boardnum") int boardnum){
+        rs.delete( replynum);
         return "redirect:/boardViewWithoutCnt?num=" + boardnum;
     }
+
 
 }
